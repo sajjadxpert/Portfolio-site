@@ -1,0 +1,129 @@
+.about__container{
+    display: grid;
+    grid-template-columns: 25% 50%;
+    margin-left: 100px;
+    gap: 15%;
+}
+
+
+.about__me{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    display: grid;
+    /* place-items: center; */
+    background: linear-gradient(var(--color-primary),transparent);
+}
+
+.about__me-image{
+    
+    background: linear-gradient(45deg, transparent,
+    #0096FF,
+    transparent);
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+    padding-bottom: 10px;
+}
+
+.about__me-image:hover{
+    transform: rotate(0);
+}
+
+.about__cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:1.5rem;
+}
+
+.about__card{
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.about__card:hover{
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.about__icon{
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.about__card h5{
+    font-size: 0.95rem;
+}
+
+.about__card small{
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+
+.about__content p{
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
+}
+
+/* Media Queries for medium devices */
+@media screen and (max-width:1024px) {
+   
+    .about__container{
+        grid-template-columns: 1fr;
+        gap: 0;
+       margin-left: 130px;
+    }
+
+    .about__me{  
+        width: 50%;
+        margin: 2rem 5rem 4rem;
+    }
+
+    .about__content p{
+        margin: 1rem 0 1.5rem;
+    }
+
+       .about__content{
+        margin-right: 160px;
+       }
+      }
+      
+      /* Media Queries for small devices */
+      @media screen and (max-width:600px) {
+       #about{
+        margin-top: -50px;
+       }
+        .about__cards{
+            grid-template-columns: 1fr 1fr;
+            gap: 1;
+           /* margin-left: 130px; */
+        }
+    
+        .about__me{  
+            width: 65%;
+            /* margin: 0rem auto 3rem; */
+            margin-left: 10px;
+        }
+    
+        .about__content p{
+            margin: 1rem 0 1.5rem;
+        }
+    
+           .about__content{
+            /* margin-right: 160px; */
+           }
+
+      .asadd{
+        margin-left: -100px;
+        /* margin-bottom: 50px; */
+      /* margin-top: -50px; */
+      }
+        
+        }
